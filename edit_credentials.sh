@@ -1,1 +1,1 @@
-EDITOR=code --wait rails credentials:edit
+EDITOR="code --wait" rails credentials:edit
