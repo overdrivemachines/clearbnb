@@ -14,11 +14,13 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 gem "sassc-rails"
 gem "image_processing", "~> 1.2"
+gem "bootstrap"
+
+# Authentication
 gem "devise"
-# gem "omniauth"
+gem "omniauth"
 gem 'omniauth-google-oauth2'
 gem "omniauth-rails_csrf_protection"
-gem "bootstrap"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
