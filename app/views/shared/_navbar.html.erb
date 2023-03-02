@@ -7,6 +7,13 @@
         <li class="nav-item">
           <%= link_to "Home", root_path, class: "nav-link" %>
         </li>
+        <% if user_signed_in? %>
+          <%= link_to "Logout", destroy_user_session_path, data: { "turbo-method": :delete }, class: "nav-link" %>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Sign In", new_user_session_path, class: "nav-link" %>
+          </li>
+        <% end %>
         <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
